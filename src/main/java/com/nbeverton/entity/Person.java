@@ -1,4 +1,4 @@
-package com.nbeverton;
+package com.nbeverton.entity;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
