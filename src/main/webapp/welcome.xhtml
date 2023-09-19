@@ -1,20 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+	
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <f:view contentType="text/html;charset=UTF-8" encoding="UTF-8">
+        <h:head>
 
-<html xmlns="http://www.w3.org/1999/xhtml"   
-      xmlns:h="http://java.sun.com/jsf/html">
+        </h:head>
+        <h:body>
+        
+        
+ <h2> Person Register </h2>
+    
+    <h:form>
+        <h:panelGrid columns="2">
+    
+    	 	 <h:outputLabel for="name" > name: </h:outputLabel>
+             <h:inputText value="#{person.name}" id="name"  />
 
-<h:head>
-  <title>JSF 2.0 Hello World</title>
-</h:head>
+             <h:outputLabel for="type" >type:</h:outputLabel>
+             <h:inputText value="" id="type"  />
 
-<h:body bgcolor="white">
+             <h:outputLabel for="email" >email:</h:outputLabel>
+             <h:inputText value="" id="email"  />
 
-  <h2>JSF 2.0 Hello World Example - welcome.xhtml</h2>
-  <h2>Welcome #{HelloBean.testeJSF}</h2>
-  
-</h:body>
+             <h:outputLabel for="telephone" >telephone:</h:outputLabel>
+             <h:inputText value="" id="telephone"  />
+
+             <h:commandButton value="Submit" action="#{person.mensagemOla()}" process="name"> </h:commandButton>
+             
+             <h:outputText id="msg" value="#{person.mensagem}"></h:outputText>
+    
+  		</h:panelGrid>
+    </h:form>
+            
+            
+        </h:body>
+    </f:view>
 
 </html>

@@ -5,40 +5,42 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"   
       xmlns:h="http://java.sun.com/jsf/html"
-      >
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
 
 
 <h:head>
-    <meta charset="UTF-8"/>
     <title>JSF 2.0 Hello World</title>
 </h:head>
 
 <h:body>
 
-    <h2> Hello World </h2>
+    <h2> Person Register </h2>
     
-<h:form prependId="false">
+    
+    
+    <h:form>
+        <h:panelGrid columns="2">
+    
+    	 	 <h:outputLabel for="name" > name: </h:outputLabel>
+             <h:inputText value="#{person.name}" id="name"  />
+ 
+             <h:outputLabel for="type" >type:</h:outputLabel>
+             <h:inputText value="#{person.type}" id="type"  />
 
-            <label for="name" >name:</label>
-             <h:inputText value="" id="name"  />
-             <br></br>
+             <h:outputLabel for="email" >email:</h:outputLabel>
+             <h:inputText value="#{person.email}" id="email"  />
 
-             <label for="contact" >contact:</label>
-             <h:inputText value="" id="contact"  />
-             <br></br>
+             <h:outputLabel for="telephone" >telephone:</h:outputLabel>
+             <h:inputText value="#{person.telephone}" id="telephone"  /> 
 
-             <label for="adress" >adress:</label>
-             <h:inputText value="" id="adress"  />
-             <br></br>
-
-             <label for="document" >document:</label>
-             <h:inputText value="" id="document"  />
-             <br></br>
-
-             <h:commandButton value="Submit" ></h:commandButton>
-
-        </h:form>
-
+             <h:commandButton value="Submit" action="#{person.mensagemOla()}" process="name"> </h:commandButton>
+             
+             <h:outputText id="msg" value="#{person.mensagem}"></h:outputText>
+    
+  		</h:panelGrid>
+    </h:form>
 
     
 </h:body>

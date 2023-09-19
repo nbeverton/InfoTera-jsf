@@ -1,4 +1,4 @@
-package com.teste;
+package com.nbeverton;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
