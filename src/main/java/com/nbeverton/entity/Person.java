@@ -7,7 +7,19 @@ public class Person {
 	private String type;
 	private String email;
 	private String telephone;
-    
+	
+	
+	public Person(String name, String type, String email, String telephone) {
+		super();
+		this.name = name;
+		this.type = type;
+		this.email = email;
+		this.telephone = telephone;
+	}
+	
+	public Person() {
+		
+	}
 	
 	public int getId() {
         return id;

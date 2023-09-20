@@ -18,15 +18,17 @@
 
     <h2> Person Register </h2>
     
-    <h:form>
-    
+    <h:form id="frm">
+    	    
     	<p:toolbar>
     		<p:toolbarGroup>
-    			<p:commandButton value="Adicionar" action="#{personBean.addPerson}" update="@form"></p:commandButton>
+    			<!-- <h:commandButton value="Adicionar" action="#{personBean.addPerson()}"></h:commandButton> -->
+    			
+    			<p:commandButton value="Add" action="#{personBean.addPerson()}" update=":frm "></p:commandButton>
     		</p:toolbarGroup>
     	</p:toolbar>
     	
-    	<p:fieldset legend="Objeto">
+		<p:fieldset legend="Objeto">
     	<p:panelGrid columns="2">
     
     	 	 <h:outputLabel for="name" > name: </h:outputLabel>

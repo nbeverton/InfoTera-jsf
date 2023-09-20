@@ -1,4 +1,4 @@
-package dao;
+package com.nbeverton.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

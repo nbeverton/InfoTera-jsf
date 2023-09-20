@@ -8,10 +8,8 @@ import javax.faces.bean.SessionScoped;
 
 import com.nbeverton.entity.Person;
 
-import dao.personDAO;
-
-@SessionScoped
 @ManagedBean
+@SessionScoped
 public class PersonBean {
 	
 	
@@ -20,20 +18,22 @@ public class PersonBean {
 	
 	public void addPerson() {
 		personList.add(person);
-		new personDAO().save(person);
+//		new personDAO().save(person);
 		person = new Person();
 	}
-	
-	
+
 	public Person getPerson() {
 		return person;
 	}
+
 	public void setPerson(Person person) {
 		this.person = person;
 	}
+
 	public List<Person> getPersonList() {
 		return personList;
 	}
+
 	public void setPersonList(List<Person> personList) {
 		this.personList = personList;
 	}
