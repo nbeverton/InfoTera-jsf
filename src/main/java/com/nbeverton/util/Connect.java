@@ -14,32 +14,31 @@ public class Connect {
 	
 
 	public static Connection getConnect() {
-		if (connect == null) {
-			try {
-				Class.forName("com.mysql.jdbc.Driver");
-			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			if(connect == null) {
+					try {
+						Class.forName("com.mysql.cj.jdbc.Driver");
+						connect = DriverManager.getConnection(URL_CONNECT, USER, PASSWORD);
+					} catch (ClassNotFoundException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (SQLException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
 			}
-			try {
-				connect = DriverManager.getConnection(URL_CONNECT, USER, PASSWORD);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-				
-			}
+		
 		return connect;
 	}
 	
 	public static void closeConnect() {
 		if (connect != null) {
-			try {
-				connect.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+				try {
+					connect.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				connect = null;
 			connect = null;
 		}
 	}

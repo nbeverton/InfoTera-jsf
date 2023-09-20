@@ -6,6 +6,7 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
+import com.nbeverton.dao.personDAO;
 import com.nbeverton.entity.Person;
 
 @ManagedBean
@@ -18,7 +19,7 @@ public class PersonBean {
 	
 	public void addPerson() {
 		personList.add(person);
-//		new personDAO().save(person);
+		new personDAO().save(person);
 		person = new Person();
 	}
 
