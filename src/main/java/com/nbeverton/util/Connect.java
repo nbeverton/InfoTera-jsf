@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class Connect {
 	
 	private static Connection connect;
-	public static final String URL_CONNECT = "jdbc://mysql://localhost/InfoTeraJSF";
+	public static final String URL_CONNECT = "jdbc:mysql://localhost/InfoTeraJSF";
 	public static final String USER = "root";
 	public static final String PASSWORD = "12345678";
 	

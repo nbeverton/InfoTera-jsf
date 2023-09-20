@@ -18,30 +18,32 @@
 
     <h2> Person Register </h2>
     
-    
-    
     <h:form>
-        <p:panelGrid columns="2">
+    
+    	<p:toolbar>
+    		<p:toolbarGroup>
+    			<p:commandButton value="Adicionar" action="#{personBean.addPerson}" update="@form"></p:commandButton>
+    		</p:toolbarGroup>
+    	</p:toolbar>
+    	
+    	<p:fieldset legend="Objeto">
+    	<p:panelGrid columns="2">
     
     	 	 <h:outputLabel for="name" > name: </h:outputLabel>
-             <p:inputText value="#{person.name}" id="name"  />
+             <p:inputText value="#{personBean.person.name}" id="name"  />
  
              <h:outputLabel for="type" >type:</h:outputLabel>
-             <p:inputText value="#{person.type}" id="type"  />
+             <p:inputText value="#{personBean.person.type}" id="type"  />
 
              <h:outputLabel for="email" >email:</h:outputLabel>
-             <p:inputText value="#{person.email}" id="email"  />
+             <p:inputText value="#{personBean.person.email}" id="email"  />
 
              <h:outputLabel for="telephone" >telephone:</h:outputLabel>
-             <p:inputMask value="#{person.telephone}" id="telephone" mask="(99) 99999.9999" /> 
-
-             <h:commandButton value="Submit" action="#{person.mensagemOla()}" process="name"> </h:commandButton>
-             
-             <h:outputText id="msg" value="#{person.mensagem}"></h:outputText>
+             <p:inputMask value="#{personBean.person.telephone}" id="telephone" mask="(99) 99999.9999" /> 
     
   		</p:panelGrid>
-  		
-  		<p:dataTable value="#{person}" var="person">
+ 		
+  		<p:dataTable value="#{personBean.personList}" var="person">
   		
   			<p:column headerText="Name">
   				<h:outputText value="#{person.name}"></h:outputText>
@@ -58,16 +60,12 @@
 			<p:column headerText="Telephone">
   				<h:outputText value="#{person.telephone}"></h:outputText>
   			</p:column>
-			  		
-  		
   		
   		</p:dataTable>
+    	</p:fieldset>
   		
     </h:form>
-    
-    
-
-    
+     
 </h:body>
 
 </html>
