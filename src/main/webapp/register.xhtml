@@ -1,73 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml"   
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
-
-
-<h:head>
-    <title>JSF 2.0 Hello World</title>
-</h:head>
-
-<h:body>
-
-    <h2> Person Register </h2>
-    
-    <h:form id="frm">
-    	    
-    	<p:toolbar>
-    		<p:toolbarGroup>
-    			<!-- <h:commandButton value="Adicionar" action="#{personBean.addPerson()}"></h:commandButton> -->
-    			
-    			<p:commandButton value="Add" action="#{personBean.addPerson()}" update=":frm "></p:commandButton>
-    		</p:toolbarGroup>
-    	</p:toolbar>
-    	
-		<p:fieldset legend="Objeto">
-    	<p:panelGrid columns="2">
-    
-    	 	 <h:outputLabel for="name" > name: </h:outputLabel>
-             <p:inputText value="#{personBean.person.name}" id="name"  />
- 
-             <h:outputLabel for="type" >type:</h:outputLabel>
-             <p:inputText value="#{personBean.person.type}" id="type"  />
-
-             <h:outputLabel for="email" >email:</h:outputLabel>
-             <p:inputText value="#{personBean.person.email}" id="email"  />
-
-             <h:outputLabel for="telephone" >telephone:</h:outputLabel>
-             <p:inputMask value="#{personBean.person.telephone}" id="telephone" mask="(99) 99999.9999" /> 
-    
-  		</p:panelGrid>
- 		
-  		<p:dataTable value="#{personBean.personList}" var="person">
-  		
-  			<p:column headerText="Name">
-  				<h:outputText value="#{person.name}"></h:outputText>
-  			</p:column>
-  			
-			<p:column headerText="Type">
-  				<h:outputText value="#{person.type}"></h:outputText>
-  			</p:column>
-  			
-			<p:column headerText="E-mail">
-  				<h:outputText value="#{person.email}"></h:outputText>
-  			</p:column>
-  			
-			<p:column headerText="Telephone">
-  				<h:outputText value="#{person.telephone}"></h:outputText>
-  			</p:column>
-  		
-  		</p:dataTable>
-    	</p:fieldset>
-  		
-    </h:form>
-     
-</h:body>
-
-</html>
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	
+	<html xmlns="http://www.w3.org/1999/xhtml"   
+	      xmlns:h="http://java.sun.com/jsf/html"
+	      xmlns:ui="http://java.sun.com/jsf/facelets"
+	      xmlns:f="http://java.sun.com/jsf/core"
+	      xmlns:p="http://primefaces.org/ui">
+	
+	
+	<h:head>
+	    <title>JSF 2.0 Hello World</title>
+	</h:head>
+	
+	<h:body>
+	
+	    <h2> Person Register </h2>
+	    
+	    <h:form id="frm">
+	    	    
+	    	<p:toolbar>
+	    		<p:toolbarGroup>
+	    			<p:commandButton value="Add" action="#{personBean.addPerson}" update=":frm"></p:commandButton>
+	    			<p:commandButton value="Search" action="#{personBean.search}" update=":frm"></p:commandButton>
+	    		</p:toolbarGroup>
+	    	</p:toolbar>
+	    	
+			<p:fieldset legend="Objeto">
+	    	<p:panelGrid columns="2">
+	    
+	    	 	 <h:outputLabel for="name" > name: </h:outputLabel>
+	             <p:inputText value="#{personBean.person.name}" id="name"  />
+	 
+	             <h:outputLabel for="type" >type:</h:outputLabel>
+	             <p:inputText value="#{personBean.person.type}" id="type"  />
+	
+	             <h:outputLabel for="email" >email:</h:outputLabel>
+	             <p:inputText value="#{personBean.person.email}" id="email"  />
+	
+	             <h:outputLabel for="telephone" >telephone:</h:outputLabel>
+	             <p:inputMask value="#{personBean.person.telephone}" id="telephone" mask="(99) 99999.9999" /> 
+	    
+	  		</p:panelGrid>
+	 		
+	  		<p:dataTable value="#{personBean.personList}" var="person">
+	  		
+	  			<p:column>
+	  				<p:commandButton value="editar" action="#{personBean.edit(person)}" update=":frm" ></p:commandButton>
+	  				<p:commandButton value="deletar" action="#{personBean.delete(person)}" update=":frm"></p:commandButton>
+	  			</p:column>
+	  		
+	  			<p:column headerText="Name">
+	  				<h:outputText value="#{person.name}"></h:outputText>
+	  			</p:column>
+	  			
+				<p:column headerText="Type">
+	  				<h:outputText value="#{person.type}"></h:outputText>
+	  			</p:column>
+	  			
+				<p:column headerText="E-mail">
+	  				<h:outputText value="#{person.email}"></h:outputText>
+	  			</p:column>
+	  			
+				<p:column headerText="Telephone">
+	  				<h:outputText value="#{person.telephone}"></h:outputText>
+	  			</p:column>
+	  		
+	  		</p:dataTable>
+	    	</p:fieldset>
+	  		
+	    </h:form>
+	     
+	</h:body>
+	
+	</html>
