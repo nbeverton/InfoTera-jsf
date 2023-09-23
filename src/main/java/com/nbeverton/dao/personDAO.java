@@ -70,8 +70,6 @@ public class personDAO {
 		} catch (SQLException e) {
 			throw new ErroSystem("Erro ao buscar info do BD!", e);
 		}
-
-		
 	}
 	
 	}
