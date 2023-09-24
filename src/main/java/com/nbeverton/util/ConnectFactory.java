@@ -11,7 +11,6 @@ public class ConnectFactory {
 	public static final String USER = "root";
 	public static final String PASSWORD = "12345678";
 	
-	
 
 	public static Connection getConnect() throws ErroSystem{
 			if(connect == null) {

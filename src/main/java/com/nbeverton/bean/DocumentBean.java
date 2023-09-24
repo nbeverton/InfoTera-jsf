@@ -9,9 +9,8 @@ import javax.faces.bean.SessionScoped;
 import com.nbeverton.dao.DocumentDAO;
 import com.nbeverton.entity.Document;
 import com.nbeverton.util.ErroSystem;
-
-//@ManagedBean
-//@SessionScoped
+@ManagedBean
+@SessionScoped
 public class DocumentBean {
 
 	

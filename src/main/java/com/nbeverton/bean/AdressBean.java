@@ -10,8 +10,8 @@ import com.nbeverton.dao.AdressDAO;
 import com.nbeverton.entity.Adress;
 import com.nbeverton.util.ErroSystem;
 
-//@ManagedBean
-//@SessionScoped
+@ManagedBean
+@SessionScoped
 public class AdressBean {
 	
 	private Adress adress = new Adress();

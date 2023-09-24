@@ -3,7 +3,7 @@ package com.nbeverton.entity;
 import java.util.Objects;
 
 public class Person {
-	
+
 	private Integer id;
 	private String name;
 	private String type;
@@ -23,7 +23,7 @@ public class Person {
 	public Person() {
 		
 	}
-	
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -38,16 +38,18 @@ public class Person {
 		if (getClass() != obj.getClass())
 			return false;
 		Person other = (Person) obj;
-		return id == other.id;
+		return Objects.equals(id, other.id);
 	}
 
-	public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
-    public String getName() {
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
         return name;
     }
     public void setName(String name) {
