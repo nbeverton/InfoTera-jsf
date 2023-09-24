@@ -7,13 +7,11 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 import com.nbeverton.dao.ContactDAO;
-import com.nbeverton.dao.personDAO;
 import com.nbeverton.entity.Contact;
-import com.nbeverton.entity.Person;
 import com.nbeverton.util.ErroSystem;
 
-@ManagedBean
-@SessionScoped
+//@ManagedBean
+//@SessionScoped
 public class ContactBean {
 	
 	private Contact contact = new Contact();

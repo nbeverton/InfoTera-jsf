@@ -2,7 +2,7 @@ package com.nbeverton.entity;
 
 import java.util.Objects;
 
-public class Telephone {
+public class Document {
 	
 	private Integer id;
 	private Integer person_id;
@@ -10,10 +10,10 @@ public class Telephone {
 	private String tp_document;
 	
 	
-	public Telephone() {
+	public Document() {
 	}
 	
-	public Telephone(Integer id, Integer person_id, String nr_document, String tp_document) {
+	public Document(Integer id, Integer person_id, String nr_document, String tp_document) {
 		super();
 		this.id = id;
 		this.person_id = person_id;
@@ -34,7 +34,7 @@ public class Telephone {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Telephone other = (Telephone) obj;
+		Document other = (Document) obj;
 		return Objects.equals(id, other.id);
 	}
 	
