@@ -1,5 +1,5 @@
 # InfoTera-jsf
-Projeto de cadastro de pessoas que relaciona endereço, documentos e contatos.
+Projeto de criação de uma página web de cadastro de pessoas utilizando o JSF e o Primefaces.
 
 Ferramentas utilizadas:
 
@@ -10,8 +10,6 @@ JPA api | Hibernate
 JSF | Primefaces
 
 MySQL
-
-O cadastro se baseia em uma pessoa com uma lista de endereços, documentos e contatos. O relaciona entre pessoas e os demais bancos é de um para muitos.
 
 Configuração do ambiente JPA - OK
 Ligação com o banco de dados e criação da tabela principal - ok
